@@ -8,13 +8,15 @@ Write a C program that prints a table with temperature in degrees Fahrenheit and
 The table of Fahrenheit temperatures will start at 1 degree then 20 and increment the following temperatures
  by 20 degrees up to 300 degrees as shown below:
 
-1 -17 
-20 -6
-40 4
-.
-.
-.
-280 137
-300 148
+       0     -17
+      20      -6
+      40       4
+      ..      ..
+      ..      ..
+     280     137
+     300     148
 
+NOTE:
+- Display the table above only using the following printf format:
+        printf("%8d%8d\n", <fahrenheit>, <celsius>);
 */
