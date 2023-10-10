@@ -3,12 +3,26 @@ echo
 
 echo "*****"
 echo
-echo "Matrix mutliplication..."
-output_mat_mul=$(./mat_mul <test/input_mat_mul)
-echo $output_mat_mul
-expected_output_mat_mul="
-   7   10 
-  15   22"
+echo "Fahrenheit to Celsius conversion..."
+output_f_to_c=$(./fahrenheit_to_celsius)
+echo $output_f_to_c
+expected_output_f_to_c="
+0       -17
+20      -6
+40      4
+60      15
+80      26
+100     37
+120     48
+140     60
+160     71
+180     82
+200     93
+220     104
+240     115
+260     126
+280     137
+300     148"
 
 if [ $? -eq 0 ] ; then
   echo "Pass: Program exited zero"
@@ -17,23 +31,23 @@ else
   exit 1
 fi
 
-if [[ $output_mat_mul == *$expected_output_mat_mul* ]] ; then
+if [[ $output_f_to_c == *$expected_output_f_to_c* ]] ; then
   echo "Pass: Output is correct"
 else
-  echo "Expected '$expected_output_mat_mul' but got: $output_mat_mul"
+  echo "Expected '$expected_output_f_to_c' but got: $output_f_to_c"
   exit 1
 fi
 
 echo
 echo "*****"
 echo
-echo "Area calculator..."
+echo "Simple banking system..."
 
-echo "1 - Circle"
 echo
-output_area_calc=$(./area_calc <test/input_area_calc_circle)
-echo $output_area_calc
-expected_output_area_calc="78.50"
+echo "2 - Deposit funds"
+output_banking_system=$(./banking_system <test/input_banking_deposit)
+echo $output_banking_system
+expected_output_banking_system="1000.00"
 
 if [ $? -eq 0 ] ; then
   echo "Pass: Program exited zero"
@@ -42,17 +56,19 @@ else
   exit 1
 fi
 
-if [[ $output_area_calc == *$expected_output_area_calc* ]] ; then
+if [[ $output_banking_system == *$expected_output_banking_system* ]] ; then
   echo "Pass: Output is correct"
 else
-  echo "Expected '$expected_output_area_calc' but got: $output_area_calc"
+  echo "Expected '$expected_output_banking_system' but got: $output_banking_system"
   exit 1
 fi
+
 echo
-echo "2 - Square"
-output_area_calc=$(./area_calc <test/input_area_calc_square)
-echo $output_area_calc
-expected_output_area_calc="25.00"
+echo "3 - Withdraw funds"
+echo
+output_banking_system=$(./banking_system <test/input_banking_withdraw)
+echo $output_banking_system
+expected_output_banking_system="500.00"
 
 if [ $? -eq 0 ] ; then
   echo "Pass: Program exited zero"
@@ -61,19 +77,18 @@ else
   exit 1
 fi
 
-if [[ $output_area_calc == *$expected_output_area_calc* ]] ; then
+if [[ $output_banking_system == *$expected_output_banking_system* ]] ; then
   echo "Pass: Output is correct"
 else
-  echo "Expected '$expected_output_area_calc' but got: $output_area_calc"
+  echo "Expected '$expected_output_banking_system' but got: $output_banking_system"
   exit 1
 fi
 
+echo "1 - Check balance"
 echo
-echo "3 - Sphere"
-echo
-output_area_calc=$(./area_calc <test/input_area_calc_sphere)
-echo $output_area_calc
-expected_output_area_calc="314.00"
+output_banking_system=$(./banking_system <test/input_banking_check_balance)
+echo $output_banking_system
+expected_output_banking_system="500.00"
 
 if [ $? -eq 0 ] ; then
   echo "Pass: Program exited zero"
@@ -82,35 +97,32 @@ else
   exit 1
 fi
 
-if [[ $output_area_calc == *$expected_output_area_calc* ]] ; then
+if [[ $output_banking_system == *$expected_output_banking_system* ]] ; then
   echo "Pass: Output is correct"
 else
-  echo "Expected '$expected_output_area_calc' but got: $output_area_calc"
+  echo "Expected '$expected_output_banking_system' but got: $output_banking_system"
   exit 1
 fi
 
-# echo "*****"
-# echo
-# echo "Matrix transpose..."
-# output_mat_transpose=$(./mat_transpose <test/input_mat_transpose)
-# echo $output_mat_transpose
-# expected_output_mat_transpose="   1   4
-#    2   5
-#    3   6"
+echo "4 - Exit"
+echo
+output_banking_system=$(./banking_system <test/input_banking_exit)
+echo $output_banking_system
+expected_output_banking_system="Exiting"
 
-# if [ $? -eq 0 ] ; then
-#   echo "Pass: Program exited zero"
-# else
-#   echo "Fail: Program did not exit zero"
-#   exit 1
-# fi
+if [ $? -eq 0 ] ; then
+  echo "Pass: Program exited zero"
+else
+  echo "Fail: Program did not exit zero"
+  exit 1
+fi
 
-# if [[ $output_mat_transpose == *$expected_output_mat_transpose* ]] ; then
-#   echo "Pass: Output is correct"
-# else
-#   echo "Expected '$expected_output_mat_transpose' but got: $output_mat_transpose"
-#   exit 1
-# fi
+if [[ $output_banking_system == *$expected_output_banking_system* ]] ; then
+  echo "Pass: Output is correct"
+else
+  echo "Expected '$expected_output_banking_system' but got: $output_banking_system"
+  exit 1
+fi
 
 echo
 echo "*****"
