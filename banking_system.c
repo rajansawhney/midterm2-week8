@@ -20,4 +20,39 @@ Use a switch-case statement to call the appropriate operation function based on 
 Note:
 - Display balance with only two decimal places.
 
+Example:
+Simple Banking System Menu:
+1. Check balance
+2. Deposit funds
+3. Withdraw funds
+4. Exit
+Enter your choice: 2
+Enter the amount to deposit: 1000
+Deposit successful. Your balance is now: $1000.00
+
+Simple Banking System Menu:
+1. Check balance
+2. Deposit funds
+3. Withdraw funds
+4. Exit
+Enter your choice: 3
+Enter the amount to withdraw: 500
+
+Withdrawal successful. Your balance is now: $500.00
+
+Simple Banking System Menu:
+1. Check balance
+2. Deposit funds
+3. Withdraw funds
+4. Exit
+Enter your choice: 1 Your balance is: $500.00
+
+Simple Banking System Menu:
+1. Check balance
+2. Deposit funds
+3. Withdraw funds
+4. Exit
+Enter your choice: 4
+Exiting the banking system. Goodbye!
+
 */
