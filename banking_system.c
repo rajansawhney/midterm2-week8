@@ -18,7 +18,7 @@ Hint: You can create functions for checking the balance, depositing funds, and w
 Use a switch-case statement to call the appropriate operation function based on the user's choice.
 
 Note:
-- Display balance with only two decimal places.
+- Display balance with two decimal places.
 
 Example:
 Simple Banking System Menu:
